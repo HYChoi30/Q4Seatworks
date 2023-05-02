@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<title>Q4 Seatwork 2</title>
+	<style type="text/css">
+		th, td {
+			padding: 10px;
+		}
+		body{
+			margin: 50px;
+		}
+		table{
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+	</style>
+
+</head>
+<body class="text-center bg-dark text-light">
+	<h1>Temperature Conversation</h1>
+	<p id="DT"></p>
+
+	<script>
+		const D = new Date();
+		document.getElementById ('DT').innerHTML = D;
+
+	</script>
+
+	<table border="2" class="bg-secondary">
+		<tr>
+			<td>Fahrenheit (F)</td>
+			<td>Celcius (C)</td>
+			<td>Description</td>
+		</tr>
+		<tr>
+			<td>
+				<form>
+					<input type="text" id="num1"><br><br>
+					<button type="submit" onclick="Compute()" class="btn btn-dark btn-block">Calculate</button>
+				</form>
+			</td>
+			<td><p id="text"></p></td>
+			<td><p>Absolute zero temperature</p></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		function Compute(){
+			let num1 = document.getElementById("num1").value;
+			let part = Number(num1 - 32);
+			let product = Number(part * 5/9)
+
+			document.getElementById("text").innerHTML = product;
+		}
+	</script>
+	<br>
+
+	<footer class="text-light text-center">
+		<small>&copy;HYChoi 2022-23</small>
+	</footer>
+
+</body>
+</html>
